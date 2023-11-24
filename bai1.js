@@ -17,14 +17,14 @@ const CloseLogin = document.getElementById("test2");
 const CloseLogin2 = document.getElementById("test3");
 
 /// show and close login
-AddItem.addEventListener("click", function () {
+AddItem.addEventListener("click", () =>{
   ShowFeatures.style.display = "block";
 });
 
-CloseLogin.addEventListener("click", function () {
+CloseLogin.addEventListener("click", () => {
   ShowFeatures.style.display = "none";
 });
-CloseLogin2.addEventListener("click", function () {
+CloseLogin2.addEventListener("click", () => {
   ShowFeatures.style.display = "none";
 });
 
@@ -37,9 +37,9 @@ LoginForm.addEventListener("click", (event) => {
 
   if (username === "nguyenhoanglan" && password === "123456") {
     alert("Logged in successfully");
-  } else if (username !== "nguyenhoanglan") {
+  } else if (username !== "nguyenhoanglan" && password === "123456") {
     alert("Wrong account");
-  } else if (password !== "123456") {
+  } else if (username === "nguyenhoanglan" && password !== "123456") {
     alert("Wrong password");
   } else {
     alert("Login failed");
